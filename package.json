@@ -1,0 +1,17 @@
+{
+  "name": "proyecto-estudiantinas",
+  "private": true,
+  "workspaces": [
+    "packages/frontend",
+    "packages/backend",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev:frontend": "npm --workspace packages/frontend run dev",
+    "dev:backend": "npm --workspace packages/backend run start:dev",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
